@@ -1,0 +1,492 @@
+\documentclass[hyperref=unicode,presentation,10pt]{beamer}
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage[version=4]{mhchem}
+\usepackage{chemfig}
+\usepackage{caption}
+
+%dělení slov
+\usepackage{ragged2e}
+\let\raggedright=\RaggedRight
+%konec dělení slov
+
+\addtobeamertemplate{frametitle}{
+	\let\insertframetitle\insertsectionhead}{}
+\addtobeamertemplate{frametitle}{
+	\let\insertframesubtitle\insertsubsectionhead}{}
+
+\makeatletter
+\CheckCommand*\beamer@checkframetitle{\@ifnextchar\bgroup\beamer@inlineframetitle{}}
+\renewcommand*\beamer@checkframetitle{\global\let\beamer@frametitle\relax\@ifnextchar\bgroup\beamer@inlineframetitle{}}
+\makeatother
+\setbeamercolor{section in toc}{fg=red}
+\setbeamertemplate{section in toc shaded}[default][100]
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{czech}
+
+\def\uv#1{„#1“}
+
+\mode<presentation>{\usetheme{default}}
+\usecolortheme{crane}
+
+\setbeamertemplate{footline}[frame number]
+
+\title[Crisis]
+{Rozmanité podoby uhlíku}
+
+\subtitle{26. 2. 2025, Ostrava}
+\author{Zdeněk Moravec, hugo@chemi.muni.cz \\ \adjincludegraphics[height=60mm]{img/IUPAC_PSP.jpg}}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\section{Uhlík}
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\vfill
+			\begin{itemize}
+				\item \textbf{Uhlík}
+				\item Prvek, se kterým se potkáváme v organické i anorganické chemii.
+				\item Ve vesmíru se jedná o čtvrtý nejběžnější prvek, v lidském těle ho najdeme 18,5 \%.\footnote[frame]{\href{https://www.news-medical.net/life-sciences/What-Chemical-Elements-are-Found-in-the-Human-Body.aspx}{What Chemical Elements are Found in the Human Body?}}
+				\item Základ organických sloučenin.
+				\item V elementární formě se vyskytuje jako grafit a diamant.
+				\item Mimo tyto běžné formy známe další allotropní modifikace, některé z nich mají velký potenciál do budoucna, některé se využívají už v dnešní době.
+			\end{itemize}
+			\vfill
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=\textwidth]{img/Carbon_cycle.jpg}
+				\caption*{Uhlíkový cyklus.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Carbon_cycle.jpg}{U.S. DOE/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\section{Allotropické modifikace uhlíku}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{figure}
+		\adjincludegraphics[height=0.7\textheight]{img/Eight_Allotropes_of_Carbon.png}
+		\caption*{Allotropické modifikace uhlíku.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Eight_Allotropes_of_Carbon.png}{mstroeck/Commons}}}
+	\end{figure}
+	\vfill
+}
+
+\subsection{Diamant}
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.65\textwidth}
+			\vfill
+			\textbf{Diamant}
+			\begin{itemize}
+				\item Jeden z nejtvrdších přírodních minerálů.
+				\item Struktura se skládá z tetraedricky koordinovaných atomů sp$^3$ uhlíku.
+				\item Vzniká v hloubkách 150--200~km za tlaku 4,5--6~GPa a teplot 900--1300~$^\circ$C.
+				\item Chemicky je poměrně inertní.
+				\item Diamanty se využívají ve šperkařství i v průmyslu.
+				\item Některé diamanty mají polovodivé vlastnosti.
+				\item Pro průmyslové aplikace se využívají přírodní diamanty nevhodné pro šperky nebo umělé diamanty.
+			\end{itemize}
+			\vfill
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=0.65\textwidth]{img/Diamonds_from_Catoka_mine_4.jpg}\caption*{Diamanty z Angoly.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Diamonds_from_Catoka_mine_4.jpg}{Helgi/Commons}}}
+				\adjincludegraphics[width=0.6\textwidth]{img/Carbon_lattice_diamond.png}
+				\caption*{Krystalová struktura diamantu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Carbon_lattice_diamond.png}{YassineMrabet/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\subsection{Syntetické diamanty}
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.65\textwidth}
+			\vfill
+			\begin{itemize}
+				\item HPHT -- High Pressure, High Temperature -- uhlík je v přítomnosti kovového katalyzátoru zahříván na vysoké teploty. Proces probíhá za vysokého tlaku.
+				\item CVD -- jako zdroj uhlíku se využívají plynné uhlovodíky. Tato metoda se využívá hlavně pro laboratorní přípravu diamantů.
+				\item Ultrazvuková kavitace (sonochemie) -- proces probíhá za laboratorní teploty a tlaku. Do suspenze grafitu v organickém rozpouštědle je zaváděn ultrazvuk. Vznikají diamanty o velikosti mikrometrů.
+			\end{itemize}
+			\vfill
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=0.7\textwidth]{img/HPHTdiamonds2.jpg}
+				\caption*{HPHT diamanty.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:HPHTdiamonds2.JPG}{Materialscientist/Commons}}}
+				\adjincludegraphics[width=.85\textwidth]{img/BARS4.png}
+				\caption*{BARS systém pro přípravu diamantů.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:BARS4.svg}{Heribero Arribas Abato/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\subsection{Nanodiamanty}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Velmi malé syntetické diamanty, jejich velikost se pohybuje mezi 4 a 100~nm.\footnote[frame]{\href{https://www.osel.cz/11343-k-cemu-vsemu-se-muzou-hodit-nanodiamanty.html}{K čemu všemu se můžou hodit nanodiamanty?}}
+		\item Díky malým rozměrům mají poměrně unikátní vlastnosti, které lze ovlivňovat.\footnote[frame]{\href{https://www.sigmaaldrich.com/technical-documents/articles/technology-spotlights/monodispersed-nanodiamonds-applications.html}{Monodispersed Nanodiamonds and their Applications}}
+		\item \textit{Detonační nanodiamanty} -- vznikají explozí vhodné výbušniny (TNT, hexogen) v uzavřeném reaktoru.
+		\item Jejich dopováním borem lze získat slibné polovodivé materiály, které by mohly umožnit další miniaturizaci elektroniky.
+		\item Dopováním dusíkem získáme nanodiamanty s fluorescenčními vlastnostmi.
+		\item Díky jejich biokompatibilitě je možné je využít i pro medicinální účely, např. k transportu léčiva, jako fluorescenční sondy.
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Grafit}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{figure}
+		\adjincludegraphics[height=0.65\textheight]{img/Diamond_and_graphite2.jpg}
+		\caption*{Srovnání diamantu a grafitu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Diamond_and_graphite2.jpg}{Itub/Commons}}}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\vfill
+			\textbf{Grafit}
+			\begin{itemize}
+				\item Měkký, na omak mastný, dobře štěpný, vede dobře teplo i elektrický proud.
+				\item Struktura se skládá z vrstev atomů sp$^2$ uhlíku. Atomy ve vrstvách jsou vázány kovalentně, vrstvy jsou drženy van der Waalsovými vazbami.
+				\item Využívá se jako mazivo, k psaní, jako materiál elektrod i do vyzdívek pecí.
+				\item Reaguje s \ce{HNO3} za vyšší teploty. Lze připravit interkaláty grafitu.
+			\end{itemize}
+			\vfill
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=0.8\textwidth]{img/Graphit_gitter.png}
+				\caption*{Struktura grafitu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Graphit_gitter.png}{Anton/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\subsection{Interkaláty grafitu}
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\vfill
+			\begin{itemize}
+				\item Sloučeniny s obecným vzorcem \ce{CX_m}, vznikají zavedením iontů \ce{X^{n+}} nebo \ce{X^{n-}} mezi vrstvy grafitu.
+				\item Interkaláty grafitu se liší zbarvením i elektrickými vlastnostmi. Připravují se reakcí grafitu se silnými oxidačními nebo redukčními činidly, např. K, \ce{O2 + H2SO4}.
+				\item Mezi nejlépe prozkoumané systémy patří interkaláty s draslíkem, např. \ce{KC8, KC24, KC36, KC48} a \ce{KC60}.
+			\end{itemize}
+			\vfill
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=0.9\textwidth]{img/Potassium-graphite-xtal-3D-SF-A.png}
+				\caption*{Krystalová struktura \ce{KC8}, fialové kuličky představují ionty \ce{K+}.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Potassium-graphite-xtal-3D-SF-A.png}{Ben Mills/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.6\textwidth}
+			\vfill
+			\begin{itemize}
+				\item \ce{CaC6} je supravodivý s hodnotou kritické teploty T$_C$~=~11,5~K (15,1~K při 8~GPa).\footnote[frame]{\href{https://dx.doi.org/10.1088/1468-6996/9/4/044102}{Synthesis and superconducting properties of \ce{CaC6}}}
+				\item Nejprve se v suchém boxu s čistým argonem smísí vápník s lithiem v poměru 3-4:1. Tato směs taje v rozmezí teplot 400-450~$^\circ$C, což je dostatečně nízká teplota, aby se předešlo vzniku karbidu vápníku.
+				\item Směs je uzavřena do trubkové pece a~roztavena.
+				\item K tavenině se přidá grafit a zahřívání probíhá v atmosféře argonu při teplotě 350~$^\circ$C po dobu 10 dní.
+			\end{itemize}
+			\vfill
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=\textwidth]{img/Glovebox.jpg}
+				\caption*{Suchý box.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Glovebox.jpg}{Rune.welsh/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\frame{
+	\frametitle{}
+	\begin{figure}
+		\adjincludegraphics[height=.7\textheight]{img/Tube-furnace.jpg}
+		\caption*{Příprava \ce{KC8} probíhá v trubkové peci.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Horno_tubular.jpg}{Manuel Almagro Rivas/Commons}}}
+	\end{figure}
+}
+
+\subsection{Oxid grafitu}
+\frame{
+	\frametitle{}
+	\vfill
+	\textbf{Oxid grafitu}
+	\begin{itemize}
+		\item Někdy se označuje jako kyselina grafitová. Skládá se z uhlíku, kyslíku a vodíku, jejich poměr je proměnný.
+		\item Poprvé byl připraven roku 1859 reakcí grafitu s chlorečnanem draselným a~dýmavou kyselinou dusičnou.\footnote[frame]{\href{https://doi.org/10.1098/rstl.1859.0013}{On the atomic weight of graphite}}
+		\item V roce 1957 byla vyvinuta bezpečnější a účinější metoda oxidace označovaná jako \textit{Hummerova metoda}. Jako oxidační činidlo je využívána směs koncentrované kyseliny sírové, dusičnanu sodného a manganistanu draselného.\footnote[frame]{\href{https://doi.org/10.1021/ja01539a017}{Preparation of Graphitic Oxide}}
+		\item Struktura oxidu grafitu je závislá na metodě přípravy a stupni oxidace. Zachovává si vrstevnatý charakter grafitu, ale vzdálenost mezi rovinami je zhruba dvakrát vyšší než u grafitu.
+		\item Je hydrofilní a snadno se hydratuje stykem s vodou nebo vodní parou.
+	\end{itemize}
+	\vfill
+}
+
+\subsection{Grafen}
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item \textbf{Grafen} -- monovrstva tvořená sp$^2$ uhlíky.
+		\item Poprvé byl připraven v roce 2004 exfoliací grafitu pomocí lepící pásky.\footnote[frame]{\href{https://www.idnes.cz/zpravy/zahranicni/nobelovu-cenu-za-fyziku-dostali-vedci-za-vyzkum-supertenkeho-uhliku.A101005_120031_zahranicni_aha}{Nobelovu cenu za fyziku dostali vědci za výzkum supertenkého uhlíku}} V roce 2010 byla za tento objev udělena Nobelova cena za fyziku.\footnote[frame]{\href{https://www.nobelprize.org/prizes/physics/2010/press-release/}{The Nobel Prize in Physics 2010}}
+		\item V roce 2008 byl grafen nejdražším materiálem světa, 1~cm$^2$ stál zhruba \$100~000~000.
+		\item V roce 2009 klesla cena na \$100/cm$^2$. Příčinou poklesu ceny byla optimalizace exfoliačních metod pro velkoobjemovou syntézu a k vývoji CVD metody výroby grafenu.
+		\item Grafen je 200$\times$ pevnější než ocel, zároveň je ale i tvrdší a lehčí.
+		\item Pohyblivost elektronů v grafenu je řádově vyšší než v křemíku, proto by mohl být výhodný pro konstrukci čipů.
+		\item V závislosti na struktuře může vystupovat jako izolant, polovodič, vodič i supravodič.
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.45\textheight]{img/Graphen.jpg}
+				\caption*{Grafenová vrstva.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Graphen.jpg}{AlexanderAlUS/Commons}}}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=0.45\textheight]{img/Graphene.jpg}
+				\caption*{Grafen připravený CVD na měděném substrátu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Graphene.jpg}{Tavo Romann/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\subsection{Fullereny}
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.65\textwidth}
+			\vfill
+			\begin{itemize}
+				\item \textbf{Fullereny}
+				\item Uzavřené, prostorové molekuly skládající se z atomů uhlíku.
+				\item V jejich dutině (kavitě) je možno uzavřít atomy nebo molekuly.
+				\item Jejich existence byla předpovězena v roce 1970, první syntéza byla publikována až v roce 1980.
+				\item Roku 1985 byly připraveny a identifikovány fullereny \ce{C60} a \ce{C70}, roku 1996 byla udělena Nobelova cena za výzkum v této oblasti.
+				\item Nejznámější a nejstabilnější je tzv. \textit{Buckminsterfulleren} \ce{C60}.\footnote[frame]{\href{https://vesmir.cz/cz/casopis/archiv-casopisu/1997/cislo-2/nejkulatejsi-molekula.html}{Nejkulatější molekula}}
+			\end{itemize}
+			\vfill
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=.75\textwidth]{img/Buckminsterfullerene-2D-skeletal.png}
+				\adjincludegraphics[width=.75\textwidth]{img/C60_Fullerene_solution.jpg}
+				\caption*{Roztok fullerenu \ce{C60} v benzenu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:C60_Fullerene_solution.jpg}{Alpha Six/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.65\textwidth}
+			\vfill
+			\begin{itemize}
+				\item Standardně se fullereny připravují působením elektrického oblouku na grafit v~atmosféře helia.
+				\item Lze je získat i ozařováním polycyklických aromatických uhlovodíků laserem.
+				\item Všechny metody syntézy poskytují směs fullerenů, kterou je nutné následně separovat pomocí chromatografických metod.
+			\end{itemize}
+			\begin{figure}
+				\adjincludegraphics[width=.7\textwidth]{img/PAHs.png}
+			\end{figure}
+			\vfill
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=\textwidth]{img/Lichtbogen_3000_Volt.jpg}
+				\caption*{Obloukový výboj.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Lichtbogen_3000_Volt.jpg}{Achgro/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Skládají se z pěti a šestičlenných kruhů tvořených $sp^2$ uhlíkem.
+		\item Jejich základní vlastnosti jsou:
+		\begin{itemize}
+			\item Vysoká elektronová afinita.
+			\item Strukturní stabilita.
+			\item Vysoký měrný povrch.
+		\end{itemize}
+		\item Těchto vlastností se využívá např. při konstrukci chemických a biologických senzorů.
+		\item Známe dva druhy derivátů fullerenů:
+		\begin{itemize}
+			\item \textit{Exohedrální} -- připojení funkční skupiny na povrch fullerenové klece.
+			\item \textit{Endohedrální} -- vložení atomu nebo malé molekuly (\ce{H2}, \ce{H2O}) dovnitř fullerenové klece, např. $\text{H}_2@\text{C}_{60}$.
+		\end{itemize}
+	\end{itemize}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.3\textheight]{img/fullerenes/Endohedral_fullerene.png}
+				\caption*{Endohedrální derivát fullerenu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Endohedral_fullerene.png}{Hajv01/Commons}}}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[height=.3\textheight]{img/fullerenes/Ir-fullerene.png}
+				\caption*{Exohedrální derivát fullerenu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Ir-fullerene.svg}{Xhmikos/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+	\begin{figure}
+		\adjincludegraphics[width=.5\textwidth]{img/fullerenes/Fullerene_dumbbell.jpg}
+		\caption*{Exohedrální derivát fullerenu.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Fullerene_dumbbell.jpg}{123 nano/Commons}}}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{figure}
+		\adjincludegraphics[height=.4\textheight]{img/fullerenes/Molecular surgery.png}
+		\adjincludegraphics[height=.32\textheight]{img/fullerenes/Molecular surgery2.png}
+		\caption*{Molekulární chirurgie.\footnote[frame]{Zdroj: \href{https://doi.org/10.1039/B811738A}{Surgery of fullerenes}}}
+	\end{figure}
+	\vfill
+}
+
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\vfill
+			\begin{itemize}
+				\item Využití v lékařství:
+				\begin{itemize}
+					\item Antioxidanty
+					\item Doprava léčiv na místo působení
+					\item Diagnostika
+					\item Antivirové látky
+				\end{itemize}
+				\item V kosmetice se využívají např. jako látky zpomalující stárnutí, díky jejich antioxidačním vlastnostem.
+				\item Suchá maziva pro ložiska, převodovky, pumpy, atd.
+			\end{itemize}
+			\vfill
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=.9\textwidth]{img/fullerenes/Buckminsterfullerene_Model_in_Red_Beads.jpg}
+				\caption*{Model fullerenu v Muzeu Nobelových cen.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Buckminsterfullerene_Model_in_Red_Beads.jpg}{Wing-Chi Poon/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\subsection{Uhlíkové nanotrubice}
+\frame{
+	\frametitle{}
+			\vfill
+			\begin{itemize}
+				\item Válcovité molekuly tvořené uhlíkem. Jejich průměr se pohybuje v nm.
+				\item Podle počtu stěn rozlišujeme:
+				\begin{itemize}
+					\item Jednostěnné uhlíkové nanotrubice (SWCNT - Single-Walled Carbon NanoTubes)
+					\item Dvoustěnné uhlíkové nanotrubice (DWCNT - Double-Walled Carbon NanoTubes)
+					\item Vícestěnné uhlíkové nanotrubice (MWCNT - Multi-Walled Carbon NanoTubes)
+				\end{itemize}
+				\item První uhlíková vlákna o průměru 50~nm byla připravena v roce 1952.
+				\item SWCNT byly připraveny až v roce 1993.
+				\item V obloukovém výboji vznikají hlavně MWCNT, větší množství SWCNT lze připravit laserovým odpařováním (ablací) uhlíku.\footnote[frame]{\href{https://www.intechopen.com/chapters/72939}{Carbon Nanotubes: Synthesis, Properties and Applications}}
+			\end{itemize}
+			\vfill
+}
+
+\frame{
+	\frametitle{}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=\textwidth]{img/Multi-walled_Carbon_Nanotube.png}
+				\caption*{Model vícestěnné uhlíkové nanotrubice.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Multi-walled_Carbon_Nanotube.png}{Eric Wieser/Commons}}}
+			\end{figure}
+
+		\end{column}
+
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\adjincludegraphics[width=.9\textwidth]{img/Multi-walled_carbon_nanotube.jpg}
+				\caption*{TEM snímek vícestěnné uhlíkové nanotrubice.\footnote[frame]{Zdroj: \href{https://commons.wikimedia.org/wiki/File:Multi-walled_carbon_nanotube.jpg}{Anna-Versh/Commons}}}
+			\end{figure}
+		\end{column}
+	\end{columns}
+}
+
+\frame{
+	\frametitle{}
+	\vfill
+	\begin{itemize}
+		\item Youngův modul CNT je okolo 270--950~GPa (pro ocel se pohybuje okolo 200~GPa).
+		\item V roce 1979 byla vydána kniha \textit{Rajské fontány} A. C. Clarka, kde popisuje kosmický výtah, jehož tažné lano je tvořeno uhlíkem, resp. jednorozměrným diamantem.\footnote[frame]{\href{https://www.cbdb.cz/kniha-3198-rajske-fontany-the-fountains-of-paradise}{Rajské fontány}}
+		\item Chemicky jsou stabilní, mají vysoký měrný povrch, což umožňuje jejich dopování jinými prvky.
+		\item Jsou dobrými vodiči tepla a mají vysokou teplotní stabilitu, degradace nastává při teplotách vyšších než 500~$^\circ$C.
+		\item Z hlediska elektrické vodivosti se mohou chovat jako polovodiče, kovy i supravodiče, v závislosti na jejich struktuře.
+		\item Lze je připravit působením elektrického oblouku, laserovou ablací nebo pomocí CVD.
+		\item Byly objeveny i v historické damascénské oceli.\footnote[frame]{\href{https://www.thevintagenews.com/2017/04/03/damascus-blacksmiths-had-made-steel-blades-with-carbon-nanotubes-long-before-they-were-scientifically-discovered/}{Damascus blacksmiths had made steel blades with carbon nanotubes long before they were scientifically discovered}}
+	\end{itemize}
+	\vfill
+}
+
+\section{Závěr}
+\frame{
+	\vfill
+	\centering \Huge
+	\textbf{Děkuji za pozornost} \\[2ex]
+	
+	\large
+	Zdeněk Moravec\\
+	hugo@chemi.muni.cz \\
+	\url{https://is.muni.cz/www/moravec/}
+	\vfill
+}
+
+\end{document}
