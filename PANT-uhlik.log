@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.22)  23 FEB 2025 20:25
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.2.22)  26 FEB 2025 09:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1414,9 +1414,9 @@ File: img/BARS4.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <10> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 162.
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 164.
 
-Overfull \hbox (0.29013pt too wide) in paragraph at lines 162--162
+Overfull \hbox (0.29013pt too wide) in paragraph at lines 164--164
 []\TU/lmss/m/sl/10 Detonační nanodiamanty \TU/lmss/m/n/10 – vznikají explozí vh
 odné výbušniny (TNT, 
  []
@@ -1457,7 +1457,7 @@ File: img/Glovebox.jpg Graphic file (type bmp)
 File: img/Tube-furnace.jpg Graphic file (type bmp)
 <img/Tube-furnace.jpg>
 
-Overfull \vbox (3.11961pt too high) detected at line 248
+Overfull \vbox (3.11961pt too high) detected at line 250
  []
 
 
@@ -1478,7 +1478,7 @@ File: img/Graphen.jpg Graphic file (type bmp)
 File: img/Graphene.jpg Graphic file (type bmp)
 <img/Graphene.jpg>
 
-Overfull \hbox (23.10088pt too wide) in paragraph at lines 297--297
+Overfull \hbox (23.10088pt too wide) in paragraph at lines 299--299
  [] 
  []
 
@@ -1492,7 +1492,7 @@ File: img/Buckminsterfullerene-2D-skeletal.png Graphic file (type bmp)
 File: img/C60_Fullerene_solution.jpg Graphic file (type bmp)
 <img/C60_Fullerene_solution.jpg>
 
-Overfull \vbox (3.35788pt too high) detected at line 323
+Overfull \vbox (3.35788pt too high) detected at line 325
  []
 
 
@@ -1500,30 +1500,40 @@ Overfull \vbox (3.35788pt too high) detected at line 323
 [16
 
 ]
-File: img/PAHs.png Graphic file (type bmp)
-<img/PAHs.png>
-File: img/Lichtbogen_3000_Volt.jpg Graphic file (type bmp)
-<img/Lichtbogen_3000_Volt.jpg>
-
-Overfull \vbox (1.2665pt too high) detected at line 347
- []
-
+File: img/BuckminsterFuller1.jpg Graphic file (type bmp)
+<img/BuckminsterFuller1.jpg>
+File: img/Preserved_R_Buckminster_Fuller_and_Anne_Hewlitt_Dome_Home.jpg Graphic
+ file (type bmp)
+<img/Preserved_R_Buckminster_Fuller_and_Anne_Hewlitt_Dome_Home.jpg>
 
 
 [17
 
 ]
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 368.
+File: img/PAHs.png Graphic file (type bmp)
+<img/PAHs.png>
+File: img/Lichtbogen_3000_Volt.jpg Graphic file (type bmp)
+<img/Lichtbogen_3000_Volt.jpg>
 
-Overfull \hbox (2.82819pt too wide) in paragraph at lines 368--368
+Overfull \vbox (1.2665pt too high) detected at line 372
+ []
+
+
+
+[18
+
+]
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 393.
+
+Overfull \hbox (2.82819pt too wide) in paragraph at lines 393--393
 []\TU/lmss/m/sl/9 Endohedrální \TU/lmss/m/n/9 – vložení atomu nebo malé molekul
 y ($[][][]$, $[][][][]$) dovnitř 
  []
 
 
 
-[18
+[19
 
 ]
 File: img/fullerenes/Endohedral_fullerene.png Graphic file (type bmp)
@@ -1534,7 +1544,7 @@ File: img/fullerenes/Fullerene_dumbbell.jpg Graphic file (type bmp)
 <img/fullerenes/Fullerene_dumbbell.jpg>
 
 
-[19
+[20
 
 ]
 File: img/fullerenes/Molecular surgery.png Graphic file (type bmp)
@@ -1542,12 +1552,12 @@ File: img/fullerenes/Molecular surgery.png Graphic file (type bmp)
 File: img/fullerenes/Molecular surgery2.png Graphic file (type bmp)
 <img/fullerenes/Molecular surgery2.png>
 
-Overfull \vbox (9.35558pt too high) detected at line 403
+Overfull \vbox (9.35558pt too high) detected at line 428
  []
 
 
 
-[20
+[21
 
 ]
 File: img/fullerenes/Buckminsterfullerene_Model_in_Red_Beads.jpg Graphic file (
@@ -1555,17 +1565,17 @@ type bmp)
 <img/fullerenes/Buckminsterfullerene_Model_in_Red_Beads.jpg>
 
 
-[21
+[22
 
 ]
-Overfull \hbox (9.70015pt too wide) in paragraph at lines 449--449
+Overfull \hbox (9.70015pt too wide) in paragraph at lines 474--474
 []\TU/lmss/m/n/10 V obloukovém výboji vznikají hlavně MWCNT, větší množství SWC
 NT 
  []
 
 
 
-[22
+[23
 
 ]
 File: img/Multi-walled_Carbon_Nanotube.png Graphic file (type bmp)
@@ -1574,15 +1584,15 @@ File: img/Multi-walled_carbon_nanotube.jpg Graphic file (type bmp)
 <img/Multi-walled_carbon_nanotube.jpg>
 
 
-[23
-
-]
-
 [24
 
 ]
 
 [25
+
+]
+
+[26
 
 ]
 \tf@nav=\write6
@@ -1600,15 +1610,15 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `PANT-uhlik.out' has not changed.
-(rerunfilecheck)             Checksum: 845F944213A38B26F4EE6B1FD9AAA1F3;1445.
+(rerunfilecheck)             Checksum: 725A7F08703ACF7079F6BC13DFBBFD6F;1445.
  ) 
 Here is how much of TeX's memory you used:
- 36000 strings out of 473839
- 740077 string characters out of 5733380
+ 36020 strings out of 473839
+ 741000 string characters out of 5733380
  1300901 words of memory out of 5000000
- 58397 multiletter control sequences out of 15000+600000
+ 58415 multiletter control sequences out of 15000+600000
  564248 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 128i,16n,123p,510b,1315s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,16n,123p,510b,1333s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on PANT-uhlik.pdf (25 pages).
+Output written on PANT-uhlik.pdf (26 pages).
